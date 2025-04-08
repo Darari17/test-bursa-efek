@@ -4,10 +4,11 @@
 
 ### 🔐 Register
 
-- **URL:** `/api/register.php`  
+- **URL:** `/api/register.php`
 - **Method:** `POST`
 
 #### Request Body:
+
 ```json
 {
   "email": "user@example.com",
@@ -16,6 +17,7 @@
 ```
 
 #### Response Sukses:
+
 ```json
 {
   "status": true,
@@ -33,10 +35,11 @@
 
 ### 🔑 Login
 
-- **URL:** `/api/login.php`  
+- **URL:** `/api/login.php`
 - **Method:** `POST`
 
 #### Request Body:
+
 ```json
 {
   "email": "user@example.com",
@@ -45,6 +48,7 @@
 ```
 
 #### Response Sukses:
+
 ```json
 {
   "status": true,
@@ -64,14 +68,15 @@
 
 ### 📦 Get All Categories
 
-- **URL:** `/api/category-products.php`  
-- **Method:** `GET`  
+- **URL:** `/api/category-products.php`
+- **Method:** `GET`
 - **Header:**
   ```
   Authorization: Bearer your_token_here
   ```
 
 #### Response Sukses:
+
 ```json
 {
   "status": true,
@@ -90,14 +95,15 @@
 
 ### ➕ Create Category
 
-- **URL:** `/api/category-products.php`  
-- **Method:** `POST`  
+- **URL:** `/api/category-products.php`
+- **Method:** `POST`
 - **Header:**
   ```
   Authorization: Bearer your_token_here
   ```
 
 #### Request Body:
+
 ```json
 {
   "name": "Furniture"
@@ -105,6 +111,7 @@
 ```
 
 #### Response Sukses:
+
 ```json
 {
   "status": true,
@@ -123,14 +130,15 @@
 
 ### 🛍️ Get All Products
 
-- **URL:** `/api/products.php`  
-- **Method:** `GET`  
+- **URL:** `/api/products.php`
+- **Method:** `GET`
 - **Header:**
   ```
   Authorization: Bearer your_token_here
   ```
 
 #### Response Sukses:
+
 ```json
 {
   "status": true,
@@ -153,14 +161,15 @@
 
 ### ➕ Create Product
 
-- **URL:** `/api/products.php`  
-- **Method:** `POST`  
+- **URL:** `/api/products.php`
+- **Method:** `POST`
 - **Header:**
   ```
   Authorization: Bearer your_token_here
   ```
 
 #### Request Body:
+
 ```json
 {
   "product_category_id": 1,
@@ -171,6 +180,7 @@
 ```
 
 #### Response Sukses:
+
 ```json
 {
   "status": true,
@@ -192,8 +202,9 @@
 ## 🚀 Cara Instalasi
 
 1. Clone repository:
+
 ```bash
-git clone [repo-url]
+git clone github.com/Darari17/test-bursa-efek
 cd toko-web-api
 ```
 
@@ -204,19 +215,3 @@ cd toko-web-api
 4. Letakkan folder di web server seperti **XAMPP/LAMPP/etc**.
 
 5. Akses API melalui endpoint yang tersedia.
-
----
-
-## 📌 Catatan
-
-- Semua endpoint **kecuali** login dan register membutuhkan header `Authorization`.
-- Token didapatkan dari response **login/register**.
-- Untuk operasi CRUD lainnya (update, delete) bisa dilihat langsung di kode sumber.
-
----
-
-## ⚙️ Persyaratan Sistem
-
-- PHP **7.4** atau lebih baru  
-- MySQL **5.7** atau lebih baru  
-- Web server seperti **Apache** atau **Nginx**
